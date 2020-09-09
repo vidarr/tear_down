@@ -6,7 +6,7 @@ build:
 
 
 build/tear_down_test: build/tear_down.o build/tear_down_test.o
-	gcc -o $@ $?
+	gcc -o $@ $^
 
 build/%.o: src/%.c src/tear_down.h
 	gcc -o $@ -c $<
